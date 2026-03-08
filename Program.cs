@@ -1,13 +1,15 @@
-﻿// Array
+﻿// Methods
 
-String[] cars = {"BMW", "FORD", "TOYOTA"};
+SayHello("Nipa");
+SayHelloMultiple("Jamal", "Udin", "Asep");
 
-// For loop
-for(int i = 0; i < cars.Length; i++) {
-  Console.WriteLine(cars[i]);
+void SayHello(String name) {
+  Console.WriteLine("Hello, " + name);
 }
 
-// foreach loop
-foreach(String car in cars) {
-  Console.WriteLine(car);
+void SayHelloMultiple(params String[] names) {
+  Console.WriteLine("Multiple!");
+  foreach(String name in names) {
+    Console.WriteLine("Hello, " + name);
+  }
 }
