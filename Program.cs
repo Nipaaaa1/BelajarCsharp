@@ -1,17 +1,9 @@
-﻿// Type Casting
+﻿// User Input
 
-int a = 10;
-double b = Convert.ToDouble(a) + 0.1;
-String c = Convert.ToString(a);
+Console.WriteLine("Sipa namamu?");
+String name = Console.ReadLine();
+Console.WriteLine("Berapa umurmu?");
+int age = Convert.ToInt16(Console.ReadLine());
 
-String d = "=";
-char e = Convert.ToChar(d);
-
-const String f = "false";
-bool g = Convert.ToBoolean(f);
-
-Console.WriteLine(a.GetType());
-Console.WriteLine(b.GetType());
-Console.WriteLine(c.GetType());
-Console.WriteLine(e.GetType());
-Console.WriteLine(g.GetType());
+Console.WriteLine("Nama kamu " + name);
+Console.WriteLine("Umur kamu " + age + " tahun");
