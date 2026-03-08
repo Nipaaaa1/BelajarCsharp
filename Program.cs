@@ -1,21 +1,13 @@
-﻿// Number Guessing Game
+﻿// Array
 
-Console.WriteLine("Welcome to Number Guessing Game");
+String[] cars = {"BMW", "FORD", "TOYOTA"};
 
-Random random = new Random();
-
-int hiddenNumber = random.Next(1, 101);
-int guess = 0;
-
-while(hiddenNumber != guess) {
-  Console.WriteLine("Pick a number between 1 - 100:");
-  guess = Convert.ToInt16(Console.ReadLine());
-  
-  if(guess > hiddenNumber) {
-    Console.WriteLine("Too high!");
-  } else if(guess < hiddenNumber) {
-    Console.WriteLine("Too low!");
-  }
+// For loop
+for(int i = 0; i < cars.Length; i++) {
+  Console.WriteLine(cars[i]);
 }
 
-Console.WriteLine("You win! The number is: " + guess);
+// foreach loop
+foreach(String car in cars) {
+  Console.WriteLine(car);
+}
