@@ -1,11 +1,17 @@
-﻿// Variabels
+﻿// Type Casting
 
-String name = "Nipa";
-int age = 20;
-bool programmer = true;
-char someChar = '#';
+int a = 10;
+double b = Convert.ToDouble(a) + 0.1;
+String c = Convert.ToString(a);
 
-Console.WriteLine("Halo, " + name);
-Console.WriteLine("Usia kamu " + age + " tahun");
-Console.WriteLine("Apakah kamu itu programmer? " + programmer);
-Console.WriteLine(someChar);
+String d = "=";
+char e = Convert.ToChar(d);
+
+const String f = "false";
+bool g = Convert.ToBoolean(f);
+
+Console.WriteLine(a.GetType());
+Console.WriteLine(b.GetType());
+Console.WriteLine(c.GetType());
+Console.WriteLine(e.GetType());
+Console.WriteLine(g.GetType());
