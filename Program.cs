@@ -1,15 +1,14 @@
-﻿// Methods
+﻿// Exception
 
-SayHello("Nipa");
-SayHelloMultiple("Jamal", "Udin", "Asep");
-
-void SayHello(String name) {
-  Console.WriteLine("Hello, " + name);
-}
-
-void SayHelloMultiple(params String[] names) {
-  Console.WriteLine("Multiple!");
-  foreach(String name in names) {
-    Console.WriteLine("Hello, " + name);
-  }
+try {
+  Console.WriteLine("Division program, enter 1st number:");
+  int x = Convert.ToInt16(Console.ReadLine());
+  Console.WriteLine("Enter 2nd number:");
+  int y = Convert.ToInt16(Console.ReadLine());
+  Console.WriteLine($"Result is {x / y }");
+} catch (DivideByZeroException e) {
+  Console.WriteLine("You can't divide by zero");
+  Console.WriteLine(e.Message);
+} finally {
+  Console.WriteLine("Proglam finished");
 }
