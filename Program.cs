@@ -1,15 +1,14 @@
-﻿// Enums
+﻿// Generic
 
-Console.WriteLine($"Planet name: {Planet.Earth}, Planet number {(int)Planet.Earth + 1}");
+int[] numbers1 = { 1, 2, 3 };
+double[] numbers2 = { 1.0, 2.0, 3.0 };
 
-enum Planet {
-  Mercury,
-  Venus,
-  Earth,
-  Mars,
-  Jupiter,
-  Saturn,
-  Uranus,
-  Neptune,
-  Pluto
+PrintArray(numbers1);
+PrintArray(numbers2);
+
+void PrintArray<T>(T[] arrays) {
+  foreach(T item in arrays) {
+    Console.Write(item + " ");
+  }
+  Console.WriteLine();
 }
