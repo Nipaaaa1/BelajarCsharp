@@ -1,19 +1,27 @@
-﻿// List
+﻿// Getter & Setter
 
-List<String> names = new List<String>();
+Person person = new Person("Nipa", "NEET");
 
-names.Add("Nipa");
-names.Add("Udin");
-names.Add("Jamal");
+person.Greetings();
 
-foreach(String name in names) {
-  Console.WriteLine(name);
-}
+person.JobTitle = "Web developer";
+person.Greetings();
 
-names.Add("Rudi");
-names.Remove("Jamal");
-names.Sort();
+class Person {
+  private String name;
+  private String jobTitle;
 
-foreach(String name in names) {
-  Console.WriteLine(name);
+  public Person(String name, String jobTitle) {
+    this.name = name;
+    this.jobTitle = jobTitle;
+  }
+
+  public String JobTitle {
+    get { return jobTitle; }
+    set { jobTitle = value; }
+  }
+
+  public void Greetings() {
+    Console.WriteLine($"Hello, my name is {name}. I'm a {jobTitle}");
+  }
 }
