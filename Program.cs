@@ -1,40 +1,19 @@
-﻿// Interface
+﻿// List
 
-Rabbit rabbit = new Rabbit();
-Wolf wolf = new Wolf();
-Fish fish = new Fish();
+List<String> names = new List<String>();
 
-rabbit.flee();
-wolf.hunt();
-fish.flee();
-fish.hunt();
+names.Add("Nipa");
+names.Add("Udin");
+names.Add("Jamal");
 
-interface IPrey {  
-  public void flee();
+foreach(String name in names) {
+  Console.WriteLine(name);
 }
 
-interface IPredator {
-  public void hunt();
-}
+names.Add("Rudi");
+names.Remove("Jamal");
+names.Sort();
 
-class Rabbit : IPrey {
-  public void flee() {
-    Console.WriteLine("The Rabbit is fleeing");
-  }
-}
-
-class Wolf : IPredator {
-  public void hunt() {
-    Console.WriteLine("The Wolf is hunting");
-    }
-}
-
-class Fish : IPrey, IPredator {
-  public void flee() {
-    Console.WriteLine("The fish swims away");
-  }
-  
-  public void hunt() {
-    Console.WriteLine("The fish is looking for a smaller fish");
-  }
+foreach(String name in names) {
+  Console.WriteLine(name);
 }
