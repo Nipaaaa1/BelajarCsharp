@@ -1,37 +1,26 @@
-﻿// Inheritence and abstract class
+﻿// Polymorphism
 
-Programmer programmer1 = new Programmer("Nipa", 20, "Web Developer");
+Cat cat = new Cat();
+Dog dog = new Dog();
 
-Programmer programmer2 = new Programmer("Jamal", 18, "Mobile Developer");
+Animal[] animals = { cat, dog };
 
-Programmer[] programmers = new Programmer[2];
-programmers[0] = programmer1;
-programmers[1] = programmer2;
-
-foreach(Programmer programmer in programmers) {
-  programmer.Greetings();
-  programmer.JobTitle();
+foreach(Animal animal in animals) {
+  animal.Sound();
 }
 
-abstract class Person {
-  protected String name;
-  protected int age;
-  
-  public void Greetings() {
-    Console.WriteLine($"Hello, I'm {name}. I'm {age} years old");
+class Animal {
+  public virtual void Sound(){}
+}
+
+class Dog : Animal {
+  public override void Sound() {
+    Console.WriteLine("The dog goes woff");
   }
 }
 
-class Programmer : Person {
-  private String title;
-  
-  public Programmer(String name, int age, String title) {
-    this.name = name;
-    this.age = age;
-    this.title = title;
-  }
-
-  public void JobTitle() {
-    Console.WriteLine($"My job is {title}");
+class Cat : Animal {
+  public override void Sound() {
+    Console.WriteLine("The cat goes meow");
   }
 }
