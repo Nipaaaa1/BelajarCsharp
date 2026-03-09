@@ -1,27 +1,15 @@
-﻿// Getter & Setter
+﻿// Enums
 
-Person person = new Person("Nipa", "NEET");
+Console.WriteLine($"Planet name: {Planet.Earth}, Planet number {(int)Planet.Earth + 1}");
 
-person.Greetings();
-
-person.JobTitle = "Web developer";
-person.Greetings();
-
-class Person {
-  private String name;
-  private String jobTitle;
-
-  public Person(String name, String jobTitle) {
-    this.name = name;
-    this.jobTitle = jobTitle;
-  }
-
-  public String JobTitle {
-    get { return jobTitle; }
-    set { jobTitle = value; }
-  }
-
-  public void Greetings() {
-    Console.WriteLine($"Hello, my name is {name}. I'm a {jobTitle}");
-  }
+enum Planet {
+  Mercury,
+  Venus,
+  Earth,
+  Mars,
+  Jupiter,
+  Saturn,
+  Uranus,
+  Neptune,
+  Pluto
 }
