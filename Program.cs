@@ -1,14 +1,25 @@
-﻿// Exception
+﻿// Class
 
-try {
-  Console.WriteLine("Division program, enter 1st number:");
-  int x = Convert.ToInt16(Console.ReadLine());
-  Console.WriteLine("Enter 2nd number:");
-  int y = Convert.ToInt16(Console.ReadLine());
-  Console.WriteLine($"Result is {x / y }");
-} catch (DivideByZeroException e) {
-  Console.WriteLine("You can't divide by zero");
-  Console.WriteLine(e.Message);
-} finally {
-  Console.WriteLine("Proglam finished");
+Car car1 = new Car("Revuelto", "Lamborghini");
+
+car1.Drive();
+
+Car.EngineSound();
+
+class Car {
+  private String name;
+  private String maker;
+
+  public Car(String name, String maker) {
+    this.name = name;
+    this.maker = maker;
+  }
+
+  public void Drive() {
+    Console.WriteLine($"You're driving a {maker} {name}");
+  }
+
+  public static void EngineSound() {
+    Console.WriteLine("Vroommmm...!!!");
+  }
 }
